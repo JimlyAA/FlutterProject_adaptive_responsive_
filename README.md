@@ -1,64 +1,97 @@
-Flutter Multi-Halaman
-Fitur Counter, Daftar Negara (REST API), dan Profil Pengguna
-✅ Menggunakan Layout Responsif
+# 📱 Aplikasi Flutter Multi-Halaman  
+Fitur Counter, Daftar Negara (REST API), dan Profil Pengguna  
+✅ Mendukung Tampilan Responsif di Website (Flutter Web)
 
-Semua halaman memanfaatkan widget layout seperti Column, Row, Expanded, ListView, dan Padding untuk mengatur tampilan konten dengan rapi dan responsif.
-Tampilan otomatis menyesuaikan diri untuk smartphone maupun tablet.
+---
 
-✅ State Management dengan StatefulWidget
-Halaman Counter dan Daftar Negara menggunakan StatefulWidget untuk mengelola perubahan data.
+## 🧩 Fitur Utama
 
-Nilai counter dapat ditambah maupun dikurangi.
+### ✅ 1. Halaman Counter
+- Menampilkan angka yang bisa dinaikkan atau diturunkan.
+- Menggunakan `StatefulWidget` dan `setState()` untuk memperbarui tampilan secara real-time.
+- Layout menggunakan `Center`, `Column`, dan `ElevatedButton` agar rapi dan mudah diakses.
 
-Daftar negara dimuat langsung dari API restcountries.com.
+### ✅ 2. Halaman Daftar Negara (REST API)
+- Mengambil data dari API: `https://restcountries.com/v3.1/all`.
+- Menampilkan:
+  - 🇺🇳 Nama Negara  
+  - 🏙 Ibukota  
+  - 🌍 Region  
+  - 🏳️ Bendera (via `Image.network`)
+- Menggunakan `http` dan `jsonDecode` untuk parsing data.
+- List ditampilkan menggunakan `ListView.builder`.
 
-✅ Navigasi Bawah & Samping (BottomNavigationBar & NavigationRail)
-Navigasi menggunakan BottomNavigationBar pada handphone.
+### ✅ 3. Halaman Profil
+- Menampilkan data statis:
+  - Nama
+  - NIM
+  - Email
+  - Foto dari folder assets
+- Layout tersusun rapi menggunakan `Column`, `Text`, dan `CircleAvatar`.
 
-Di tablet (layar ≥ 600px), navigasi berganti ke NavigationRail agar lebih optimal memanfaatkan ruang layar.
+---
 
-Semua halaman berada dalam satu layout (MainPage) yang dinamis.
+## 🎨 Desain & Responsivitas
 
-✅ Halaman Counter
-Menampilkan angka yang bisa dinaikkan dan diturunkan.
+### ✅ Navigasi Bawah & Samping
+- `BottomNavigationBar` aktif di layar kecil (mobile).
+- `NavigationRail` aktif di layar lebar (seperti web/desktop).
+- Pergantian halaman dilakukan dengan `setState` dan pengelolaan indeks halaman.
 
-Menggunakan Center dan MainAxisAlignment.center untuk keseimbangan tampilan.
+### ✅ Scaffold & AppBar Mandiri
+- Masing-masing halaman menggunakan `Scaffold` dan `AppBar` sendiri untuk struktur modular dan rapi.
 
-Menggunakan ElevatedButton untuk interaksi pengguna.
+---
 
-✅ Halaman Daftar Negara (REST API)
-Mengambil data dari https://restcountries.com/v3.1/all
+## 🌐 Tampilan di Website (Flutter Web)
+- Aplikasi kompatibel untuk dijalankan di browser.
+- Tampilan otomatis menyesuaikan ukuran layar:
+  - Navigasi samping muncul jika layar cukup lebar.
+  - Konten tetap proporsional dan tidak terpotong.
+- Ideal untuk demonstrasi portfolio berbasis web.
 
-Menampilkan: Nama Negara, Ibukota, Region, dan Bendera.
+---
 
-Menggunakan ListView.builder agar daftar dapat discroll dan optimal di berbagai ukuran layar.
+## ⚙️ Teknologi yang Digunakan
+- Flutter (Material 3)
+- `http` package untuk REST API
+- Responsive Layout (MediaQuery, LayoutBuilder)
+- State Management sederhana dengan `setState()`
 
-Loading indikator (CircularProgressIndicator) muncul saat data dimuat.
+---
 
-✅ Halaman Profil
-Menampilkan informasi statis: nama, NIM, email, dan foto dari assets.
+## 🧪 Cara Menjalankan
 
-Tampilan tertata menggunakan Column dan CircleAvatar.
+1. Clone repositori ini:
+    ```bash
+    git clone https://github.com/username/nama-repo.git
+    ```
 
-Ukuran gambar dibatasi (radius: 60) agar tampil proporsional.
+2. Masuk ke folder proyek:
+    ```bash
+    cd nama-repo
+    ```
 
-Tampilan di Handphone
-![image](https://github.com/user-attachments/assets/c524f1a7-0ab0-4a53-b043-f9beabfeb864)
+3. Jalankan di emulator atau browser:
+    ```bash
+    flutter run -d chrome
+    ```
 
+---
 
+## 📸 Screenshot
 
-Layout disusun vertikal dan terpusat.
+> _(Tambahkan screenshot aplikasi jika ada untuk mempercantik tampilan)_
 
-Tombol besar dan teks jelas agar mudah digunakan di layar kecil.
+---
 
-Konten scrollable bila tidak muat di layar.
+## 👤 Profil Pengembang
 
- Tampilan di Website (Flutter Web)
-![image](https://github.com/user-attachments/assets/cf89c870-9638-4e4a-950f-fa604b77ab62)
-Aplikasi tetap fleksibel saat dijalankan di browser.
+- Nama: Jimly Asidiq Anwar  
+- NIM: 4522210018  
+- Email: jimlyasidiq@gmail.com  
 
-NavigationRail muncul di kiri jika lebar layar cukup besar.
+---
 
-Konten halaman memanfaatkan ruang ekstra secara efisien.
-
-Tidak ada elemen yang terpotong karena layout sudah responsif.
+Terima kasih telah mengunjungi repositori ini! 🌟  
+Jangan lupa ⭐️ jika kamu suka proyek ini.
