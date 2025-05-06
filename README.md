@@ -54,7 +54,8 @@ Tombol besar dan teks jelas agar mudah digunakan di layar kecil.
 Konten scrollable bila tidak muat di layar.
 
 ## Tampilan di Website (Flutter Web)
-![image](https://github.com/user-attachments/assets/cf89c870-9638-4e4a-950f-fa604b77ab62)
+![image](https://github.com/user-attachments/assets/6c969eb2-ff4f-4864-b2a3-90d3df989d03)
+
 Aplikasi tetap fleksibel saat dijalankan di browser.
 
 NavigationRail muncul di kiri jika lebar layar cukup besar.
